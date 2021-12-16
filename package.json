@@ -1,6 +1,6 @@
 {
-  "name": "@wowmaking/react-native-iron-source",
-  "version": "7.0.4",
+  "name": "@allure-ai/react-native-iron-source",
+  "version": "7.0.5",
   "description": "React Native package to interface the ironSource SDK.  https://ironsrc.com",
   "main": "index.js",
   "scripts": {
@@ -16,13 +16,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/wowmaking/react-native-iron-source.git"
+    "url": "https://github.com/allure-ai/react-native-iron-source.git"
   },
-  "homepage": "https://github.com/wowmaking/react-native-iron-source#README",
+  "homepage": "https://github.com/allure-ai/react-native-iron-source#README",
   "author": {
-    "name": "Dmitriy Kazlouski",
-    "email": "d.kazlouski@wowmaking.net",
-    "url": "https://github.com/wowmaking"
+    "name": "Allure AI",
+    "email": "opensource@allure.id",
+    "url": "https://github.com/allure-ai"
   },
   "license": "MIT",
   "peerDependencies": {

@@ -7,7 +7,7 @@ import {
   IronSourceInterstitials,
   IronSourceOfferwall,
   IronSourceBanner,
-} from '@wowmaking/react-native-iron-source';
+} from '@allure-ai/react-native-iron-source';
 
 const segment = new IronSourceSegment();
 

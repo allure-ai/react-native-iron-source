@@ -1,10 +1,10 @@
 
-# @wowmaking/react-native-iron-source
+# @allure-ai/react-native-iron-source
 
 [Iron Source SDK](https://developers.ironsrc.com/) React Native bridge. 
 Supports all ad units (Rewarded Video, Interstitial, Banner, Offerwall).
 
-Many thanks to all contributors of [squaretwo/react-native-iron-source](https://github.com/squaretwo/react-native-iron-source). 
+Many thanks to all contributors of [squaretwo/react-native-iron-source](https://github.com/squaretwo/react-native-iron-source) and the fork wowmaking/react-native-iron-source](https://github.com/wowmaking/react-native-iron-source). 
 
 The fork includes following improvements:
 * Banner implementation
@@ -19,16 +19,16 @@ The fork includes following improvements:
 
 ## Compatibility table
 
-| @wowmaking/react-native-iron-source | Xcode  | IronSourceSDK |
+| @allure-ai/react-native-iron-source | Xcode  | IronSourceSDK |
 | ----------------------------------- | ------ | ------------- |
 | 7.0.0                               | <= 11  | <= 7.0.1      |
 | \>= 7.0.3                           | \>= 12 | \>= 7.0.3     |
 
 ## Getting started
 
-`npm install @wowmaking/react-native-iron-source --save`
+`npm install @allure-ai/react-native-iron-source --save`
 
-You can find available versions [here](https://github.com/wowmaking/react-native-iron-source/releases).
+You can find available versions [here](https://github.com/allure-ai/react-native-iron-source/releases).
 
 ### RN >= 0.60
 
@@ -52,7 +52,7 @@ Add `SKAdNetworkIdentifier` to your Info.plist
          // Existing repos here
          // ...
          
-         maven { url "https://dl.bintray.com/ironsource-mobile/android-sdk" }
+         maven { url 'https://android-sdk.is.com/' }
      }
  }
  ```
@@ -66,7 +66,7 @@ Add `SKAdNetworkIdentifier` to your Info.plist
 
   #### Mostly automatic installation
   
-  `$ react-native link @wowmaking/react-native-iron-source`
+  `$ react-native link @allure-ai/react-native-iron-source`
   
   #### Manual installation
   
@@ -74,12 +74,12 @@ Add `SKAdNetworkIdentifier` to your Info.plist
   ##### iOS
   
   1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-  2. Go to `node_modules` ➜ `@wowmaking/react-native-iron-source` and add `RNIronSource.xcodeproj`
+  2. Go to `node_modules` ➜ `@allure-ai/react-native-iron-source` and add `RNIronSource.xcodeproj`
   3. In XCode, in the project navigator, select your project. Add `libRNIronSource.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
   4. Run your project (`Cmd+R`)
   
   ##### iOS CocoaPods
-  1. Add `pod 'RNIronSource', :path => '../node_modules/@wowmaking/react-native-iron-source'` to your `ios/Podfile`
+  1. Add `pod 'RNIronSource', :path => '../node_modules/@allure-ai/react-native-iron-source'` to your `ios/Podfile`
   2. Run `pod install` while in `ios` directory
   
   #### Allow iOS Static Frameworks
@@ -93,12 +93,12 @@ Add `SKAdNetworkIdentifier` to your Info.plist
     - Add `new RNIronSourcePackage()` to the list returned by the `getPackages()` method
   2. Append the following lines to `android/settings.gradle`:
     	```
-    	include ':@wowmaking_react-native-iron-source'
-    	project(':@wowmaking_react-native-iron-source').projectDir = new File(rootProject.projectDir, 	'../node_modules/@wowmaking/react-native-iron-source/android')
+    	include ':@allure-ai_react-native-iron-source'
+    	project(':@allure-ai_react-native-iron-source').projectDir = new File(rootProject.projectDir, 	'../node_modules/@allure-ai/react-native-iron-source/android')
     	```
   3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
     	```
-      implementation project(':@wowmaking_react-native-iron-source')
+      implementation project(':@allure-ai_react-native-iron-source')
     	```
   
   ### Manual Setup
@@ -141,7 +141,7 @@ Official doc:
 __Warning:__ Using this syntax means that you lock down your iOS CocoaPods dependencies to versions that we currently use in our organization. We don't recommend doing this because you might want another version at some point.
 
 ```
-pod 'RNIronSource', :path => '../node_modules/@wowmaking/react-native-iron-source', :subspecs => [
+pod 'RNIronSource', :path => '../node_modules/@allure-ai/react-native-iron-source', :subspecs => [
     'Core', # required
     'AdColony',
     'Admob',
@@ -162,9 +162,9 @@ pod 'RNIronSource', :path => '../node_modules/@wowmaking/react-native-iron-sourc
 
 ## Usage
 
-You can use [example app](https://github.com/wowmaking/react-native-iron-source/tree/master/ExampleApp) as a reference.
+You can use [example app](https://github.com/allure-ai/react-native-iron-source/tree/master/ExampleApp) as a reference.
 
-There is also an older example app for RN <= 0.59.x [in this branch](https://github.com/wowmaking/react-native-iron-source/tree/example-app-59/ExampleApp).
+There is also an older example app for RN <= 0.59.x [in this branch](https://github.com/allure-ai/react-native-iron-source/tree/example-app-59/ExampleApp).
 
 ### Initialization
 
@@ -172,7 +172,7 @@ There is also an older example app for RN <= 0.59.x [in this branch](https://git
  <summary>1. (Optional) Obtain user's consent to share user data with ad network publishers.</summary>
  
  ```javascript
- import { IronSource } from '@wowmaking/react-native-iron-source';
+ import { IronSource } from '@allure-ai/react-native-iron-source';
 
  // After user granted consent
 
@@ -183,7 +183,7 @@ There is also an older example app for RN <= 0.59.x [in this branch](https://git
 2. Initialize IronSource SDK
 
 ```javascript
-import { IronSource } from '@wowmaking/react-native-iron-source';
+import { IronSource } from '@allure-ai/react-native-iron-source';
 
 IronSource.initializeIronSource('8a19a09d', 'userId', {
   validateIntegration: true,
@@ -195,7 +195,7 @@ IronSource.initializeIronSource('8a19a09d', 'userId', {
 ### Interstitial
 
 ```javascript
-import { IronSourceInterstitials } from '@wowmaking/react-native-iron-source';
+import { IronSourceInterstitials } from '@allure-ai/react-native-iron-source';
 
 IronSourceInterstitials.loadInterstitial();
 IronSourceInterstitials.addEventListener('interstitialDidLoad', () => {
@@ -205,7 +205,7 @@ IronSourceInterstitials.addEventListener('interstitialDidLoad', () => {
 ### Rewarded Video
 
 ```javascript
-import { IronSourceRewardedVideo } from '@wowmaking/react-native-iron-source';
+import { IronSourceRewardedVideo } from '@allure-ai/react-native-iron-source';
 
 
 IronSourceRewardedVideo.initializeRewardedVideo();
@@ -226,7 +226,7 @@ IronSourceRewardedVideo.isRewardedVideoAvailable().then((available) => {
 ### Banner
 
 ```javascript
-import { IronSourceBanner } from '@wowmaking/react-native-iron-source';
+import { IronSourceBanner } from '@allure-ai/react-native-iron-source';
 
 IronSourceBanner.loadBanner('LARGE');
 IronSourceBanner.addEventListener('ironSourceBannerDidLoad', () => {
@@ -237,7 +237,7 @@ IronSourceBanner.addEventListener('ironSourceBannerDidLoad', () => {
 ### Offerwall
 
 ```javascript
-import { IronSourceOfferwall } from '@wowmaking/react-native-iron-source';
+import { IronSourceOfferwall } from '@allure-ai/react-native-iron-source';
 
 IronSourceOfferwall.showOfferwall();
 IronSourceOfferwall.addEventListener('ironSourceOfferwallReceivedCredits', res => {
@@ -309,7 +309,7 @@ IronSourceBanner.hideBanner();
 ### IronSourceSegment constructor
 Creates a segment manager
 ```javascript
-import { IronSourceSegment } from '@wowmaking/react-native-iron-source';
+import { IronSourceSegment } from '@allure-ai/react-native-iron-source';
 
 const segment = new IronSourceSegment();
 ```
